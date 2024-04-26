@@ -1,0 +1,25 @@
+
+
+.navbar {
+    background-color: yellow; /* Set the background color to yellow */
+    padding: 10px 0; /* Add some padding */
+    text-align: center; /* Center align the navigation links */
+  }
+  
+  .navbar a {
+    color: black; /* Color of the text */
+    padding: 10px 15px; /* Padding around the links for better touch */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Make font bold */
+    margin: 0 10px; /* Space between links */
+  }
+  
+  .navbar a:hover {
+    background-color: #f2f2f2; /* Light grey background on hover */
+  }
+  
+  .navbars {
+   max-width: 100%;
+   position: absolute;
+   left: -3000px;
+  }

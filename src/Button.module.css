@@ -1,0 +1,16 @@
+.functioSn{
+    
+    padding: 40px 80px;
+ 
+}
+.error{
+    font-size: 33px;
+
+    color: blue;
+    background-color: brown;
+    border: none;
+}
+.error:hover{
+    color: red;
+    border-radius: 50px;
+}
