@@ -24,7 +24,7 @@ function App() {
           {questions.map((faItems , i) =>{
             return(
               <div className='faqItems'>
-              <h2 >{faItems.question}</h2>
+              <h2 onClick={()=> setfaqs(faItems.id)} >{faItems.question}</h2>
               <p className={faqs == faItems.id ? 'activefaq' : ''}>{faItems.Answer}</p>
   
             </div>
@@ -39,17 +39,7 @@ function App() {
 
 
 
-          <div className='faqItems'>
-            <h2>What is quesitonss</h2>
-            <p>Clean Code - Web Development Exercises and Quizzes
-clean-code.io
-https://clean-code.io
-Practice HTML, CSS, JavaScript, and other web development topics with Clean Code. Access exercises and quizzes to enhance your web development skills.
-‎Login · ‎Exercises · ‎Quizzes · ‎PlayGround
-</p>
-
-          </div>
-
+          
         </div>
       </div>
 

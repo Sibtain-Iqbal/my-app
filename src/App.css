@@ -185,7 +185,7 @@
   /* padding: 10px; */
   height: 0px;
   transform: scaleY(0);
-  transition: 2s;
+  transition: 1s;
 }
 .simple{
   padding-bottom: 50px;
@@ -193,7 +193,8 @@
 
 .activefaq{
 
-  transform: scaleY(2) !important;
+  height: auto !important;
+  transform: scaleY(1) !important;
   margin: 5px;
   height: auto !important;
 }
