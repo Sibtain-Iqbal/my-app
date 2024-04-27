@@ -4,14 +4,79 @@ import './App.css';
 import { useState } from 'react';
 import BtnModule from "./Button.module.css"
 import NavBar from './Navbar';
+import { questions } from './questions';
 function App() {
   const [status, setStatus] = useState(false);
   const [showpassword, setshowpassword] = useState(false)
   const [menubar, setmenubar] = useState(false)
   const [hambar ,sethambar ] = useState(false)
+  const [faqs, setfaqs ] = useState(questions[0].id)
 
   return (
     <div className="App">
+
+
+      <div className='simple'>
+        <h1>frequesntly asked questions</h1>
+        <div className='faQuoters'>
+
+
+          {questions.map((faItems , i) =>{
+            return(
+              <div className='faqItems'>
+              <h2 >{faItems.question}</h2>
+              <p className={faqs == faItems.id ? 'activefaq' : ''}>{faItems.Answer}</p>
+  
+            </div>
+  
+              
+            )
+          })}
+
+
+
+
+
+
+
+          <div className='faqItems'>
+            <h2>What is quesitonss</h2>
+            <p>Clean Code - Web Development Exercises and Quizzes
+clean-code.io
+https://clean-code.io
+Practice HTML, CSS, JavaScript, and other web development topics with Clean Code. Access exercises and quizzes to enhance your web development skills.
+‎Login · ‎Exercises · ‎Quizzes · ‎PlayGround
+</p>
+
+          </div>
+
+        </div>
+      </div>
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 

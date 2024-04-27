@@ -23,7 +23,12 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.mgs{
+  margin-bottom: 300px;
+  width: 1320px;
+  border: 2px solid red;
+  text-align: center;
+}
 .App-link {
   color: #61dafb;
 }
@@ -144,4 +149,51 @@
   padding: 20px 50px;
   border-radius: 20px;
   border: none;
+}
+
+
+.Faqs{
+  width: 100%;
+  height: 250px;
+  border: 1px solid red;
+}
+
+
+.faQuoters{
+  width: 1320px;
+  margin: auto;
+
+}
+
+.faqItems{
+  border: 2px solid red;
+  margin-bottom: 20px;
+}
+
+.faqItems h2{
+ text-align: left;
+ margin: 0;
+ background-color: #282c34;
+ color: white;
+
+ padding: 4px;
+}
+
+.faqItems p{
+  text-align: left;
+  margin: 0;
+  /* padding: 10px; */
+  height: 0px;
+  transform: scaleY(0);
+  transition: 2s;
+}
+.simple{
+  padding-bottom: 50px;
+}
+
+.activefaq{
+
+  transform: scaleY(2) !important;
+  margin: 5px;
+  height: auto !important;
 }
