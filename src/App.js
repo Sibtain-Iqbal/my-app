@@ -1,9 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import 'react-notifications/lib/notifications.css';
 import { useState } from 'react';
 import BtnModule from "./Button.module.css"
 import NavBar from './Navbar';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 import { questions } from './questions';
 function App() {
   const [status, setStatus] = useState(false);
@@ -12,10 +14,39 @@ function App() {
   const [hambar ,sethambar ] = useState(false)
   const [faqs, setfaqs ] = useState(questions[0].id)
 
+  let succes = ()=>{
+    NotificationManager.info("your account is succesfully login")
+   
+  }
+  let warning = ()=>{
+    NotificationManager.warning("your are alert")
+  }
+
   return (
     <div className="App">
 
 
+
+      <button className='noti btn-succes' onClick={succes}> Clicked me </button>
+      <button className='noti bt-danger ' onClick={warning}>warning</button>
+
+
+
+      <NotificationContainer/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* 
       <div className='simple'>
         <h1>frequesntly asked questions</h1>
         <div className='faQuoters'>
@@ -41,35 +72,7 @@ function App() {
 
           
         </div>
-      </div>
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
+      </div> */}
 
         <div onClick={()=> sethambar(!hambar)} className={`model ${(hambar)? 'modelShow' : '' }`}> </div>
           <div className={`showModel ${(hambar)? 'transtionModel' : "" }`}>
@@ -114,7 +117,7 @@ function App() {
         
         </button>
 
-      <div className={`menu ${menubar ? 'active' : ''}`}>
+      {/* <div className={`menu ${menubar ? 'active' : ''}`}>
         <ul>
           <li>Home</li>
           <li>Aboyt</li>
@@ -123,7 +126,7 @@ function App() {
           <li>gALLERY </li>
         </ul>
 
-      </div>
+      </div> */}
 
 
 

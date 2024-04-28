@@ -198,3 +198,13 @@
   margin: 5px;
   height: auto !important;
 }
+
+
+.noti{
+  padding: 10px;
+  background-color: #282c34;
+  color: aliceblue;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-radius: 10px;
+}
