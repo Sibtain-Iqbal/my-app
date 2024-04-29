@@ -7,6 +7,7 @@ import BtnModule from "./Button.module.css"
 import NavBar from './Navbar';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 import { questions } from './questions';
+import Faqs from './Faqs';
 function App() {
   const [status, setStatus] = useState(false);
   const [showpassword, setshowpassword] = useState(false)
@@ -25,6 +26,7 @@ function App() {
   return (
     <div className="App">
 
+      <Faqs/>
 
 
       <button className='noti btn-succes' onClick={succes}> Clicked me </button>

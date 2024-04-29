@@ -1,58 +1,49 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { questions } from './questions'
-
-
-let [Finditem, setfinditem] = (questions[0].id)
-
-const items = questions.map((fqitems,i)=>{
-
-
-
-  let itemdetails ={
-    fqitems
-    ,Finditem
-    ,setfinditem 
-  }
-
-  return (
-    <FaqItems itemdetails = {itemdetails} key={i} />
-  )
-})
-
-
-
-
-
 
 
 
 function Faqs() {
+  const [activefaqs, setactivefaqs] = useState(questions[0].id)
+  const items = questions.map((itemdata, i) => {
+    let itemdetails = {
+      itemdata,
+      activefaqs,
+      setactivefaqs
+
+    }
+
+
+    return (
+
+      <Faqitems itemdetails={itemdetails} key={i} />
+    )
+  })
+
   return (
     <div>
-        <h1>Frequently asked questions(faqs)</h1>
-        <div className='faQuoters'>
-          {items}
+      <h1>frequently  asks questions(Faqs)</h1>
 
-  </div>
-      
+      <div className='faQuoters'>
+        {items}
+      </div>
+
     </div>
   )
 }
-
 export default Faqs
 
 
 
-function FaqItems ({itemdetails}){
-    return(
-        <div>
+function Faqitems({ itemdetails }) {
+  const { itemdata, setactivefaqs, activefaqs } = itemdetails
 
-            <div className='faqItems'>
-              <h2>{itemdetails.fqitems.question}</h2>
-            </div>
+  return (
 
+    <div className='faqItems'>
+      <h2 onClick={() => setactivefaqs(itemdetails.itemdata.id)} >{itemdata.question} </h2>
+      <p className={activefaqs === itemdata.id ? 'activefaq' : ''} >{itemdata.answer}</p>
+    </div>
+  )
 
-
-        </div>
-    )
 }
