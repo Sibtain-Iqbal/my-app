@@ -194,9 +194,10 @@
 .activefaq{
 
   height: auto !important;
-  transform: scaleY(1) !important;
+  transform: scaleY(5) !important;
   margin: 5px;
   height: auto !important;
+  cursor: pointer;
 }
 
 

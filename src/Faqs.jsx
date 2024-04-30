@@ -37,12 +37,12 @@ export default Faqs
 
 function Faqitems({ itemdetails }) {
   const { itemdata, setactivefaqs, activefaqs } = itemdetails
-
+  
   return (
 
     <div className='faqItems'>
       <h2 onClick={() => setactivefaqs(itemdetails.itemdata.id)} >{itemdata.question} </h2>
-      <p className={activefaqs === itemdata.id ? 'activefaq' : ''} >{itemdata.answer}</p>
+      <p className={activefaqs == itemdata.id ? 'activefaq' : ''} >{itemdata.answer}</p>
     </div>
   )
 
